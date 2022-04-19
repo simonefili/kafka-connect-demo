@@ -52,7 +52,7 @@ services:
       - bash 
       - -c 
       - |
-        confluent-hub install castorm/kafka-connect-http:7.1.1
+        confluent-hub install --no-prompt castorm/kafka-connect-http:7.1.1
         /etc/confluent/docker/run
 
   kafka-ui:
@@ -68,3 +68,4 @@ services:
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka-broker:9092
       KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
       KAFKA_CLUSTERS_0_KAFKACONNECT_0_NAME: connect
+      KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS: connect:8083
