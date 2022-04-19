@@ -52,7 +52,7 @@ services:
       - bash 
       - -c 
       - |
-        confluent-hub install --no-prompt castorm/kafka-connect-http:7.1.1
+        confluent-hub install --no-prompt castorm/kafka-connect-http:0.8.6
         /etc/confluent/docker/run
 
   kafka-ui:
